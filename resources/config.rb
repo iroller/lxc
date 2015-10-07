@@ -22,5 +22,5 @@ attribute :pivotdir, :kind_of => String
 if node[:platform_version] == '14.04'
   attribute :start_auto, :kind_of => Numeric, :default => 1
   attribute :start_delay, :kind_of => Numeric, :default => 5
-  attribute :mount_auto, :kind_of => Array, :default => nil
+  attribute :mount_auto, :kind_of => String, :default => nil
 end
