@@ -74,7 +74,7 @@ action :create do
 
   file "lxc update_config[#{new_resource.utsname}]" do
     path _lxc.container_config.to_path
-    content ::Lxc::FileConfig.generate_config(new_resource)
+    content ::Lxc::FileConfig.generate_config(new_resource.to_hash)
     mode 0644
   end
 end
