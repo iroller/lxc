@@ -72,7 +72,7 @@ chef_gem 'elecksee' do
     source node[:lxc][:elecksee][:source]
   end
   action node[:lxc][:elecksee][:action]
-  compile_time false
+  compile_time true
 end
 
 file '/etc/apparmor.d/lxc/lxc-with-nesting' do
